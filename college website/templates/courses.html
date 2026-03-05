@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Courses offered by R. K. Desai Achchhariwala Groups College including BCA, BBA, B.Com, B.Ed and B.Sc programs.">
+  <title>Courses | R.K. Desai College</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; background: #f5f7ff; }
+    .container { width: 90%; margin: auto; }
+
+    /* Page Title */
+    h2 {
+      text-align: center;
+      color: #0b63d1;
+      margin: 20px 0;
+      font-size: 32px;
+    }
+
+    /* Course Card */
+    .features { margin-top: 20px; }
+    .feature {
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 22px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
+    }
+    .feature:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+    .feature h3 {
+      margin-bottom: 12px;
+      color: #0b63d1;
+      font-size: 22px;
+    }
+
+    ul { margin-left: 20px; }
+    ul li { margin-bottom: 6px; }
+
+    /* Header Nav */
+    header .nav a.button {
+      padding: 8px 15px;
+      background: #0b63d1;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    header .nav a.button:hover {
+      background: #084a9b;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="overlay">
+    <div class="container nav">
+      <div class="brand" style="text-align: center;"><h3>R. K. Desai Achchhariwala Groups College</h3></div>
+      <nav>
+        <a href="{{ url_for('index') }}" class="button">Home</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section id="courses" class="container" style="padding-top:18px">
+  <h2><u>Courses Offered</u></h2>
+
+  <div class="features">
+
+    <!-- BCA -->
+    <div class="feature">
+      <h3>BCA — Bachelor of Computer Applications (3 Years)</h3>
+      <ul>
+        <li>Undergraduate program in Computer Applications & IT</li>
+        <li>Duration: 3 Years (6 Semesters)</li>
+        <li>Eligibility: 12th Pass (Any Stream)</li>
+        <li>Career: Software Developer, Data Analyst, Web Developer, Cyber Security Expert</li>
+        <li>Higher Studies: MCA, MBA (IT)</li>
+      </ul>
+    </div>
+
+    <!-- B.Sc Biochemistry -->
+    <div class="feature">
+      <h3>B.Sc Biochemistry / Biomolecules (3 Years)</h3>
+      <ul>
+        <li>Focus on biological molecules & cellular processes</li>
+        <li>Eligibility: 12th Science (Biology/Chemistry preferred)</li>
+        <li>Career: Research Scientist, Lab Technician, Clinical Analyst</li>
+        <li>Higher Studies: M.Sc Biochemistry / Biotechnology</li>
+      </ul>
+    </div>
+
+    <!-- B.Sc Chemistry -->
+    <div class="feature">
+      <h3>B.Sc Chemistry (3 Years)</h3>
+      <ul>
+        <li>Study of chemical reactions, properties & applications</li>
+        <li>Eligibility: 12th Science (Chemistry recommended)</li>
+        <li>Career: QC Analyst, Chemist, Research Scientist</li>
+        <li>Higher Studies: M.Sc Chemistry</li>
+      </ul>
+    </div>
+
+    <!-- B.Com -->
+    <div class="feature">
+      <h3>B.Com — Bachelor of Commerce (3 Years)</h3>
+      <ul>
+        <li>Covers Accounting, Finance, Business Law, Economics</li>
+        <li>Eligibility: 12th Pass (Any Stream)</li>
+        <li>Career: Accountant, Financial Analyst, Tax Consultant</li>
+        <li>Higher Studies: M.Com, MBA, CA, CS, CMA</li>
+      </ul>
+    </div>
+
+    <!-- BBA -->
+    <div class="feature">
+      <h3>BBA — Bachelor of Business Administration (3 Years)</h3>
+      <ul>
+        <li>Focus on management, marketing, HR, finance</li>
+        <li>Eligibility: 12th Pass (Any Stream)</li>
+        <li>Career: Manager, HR Executive, Marketing Leader</li>
+        <li>Higher Studies: MBA, PGDM</li>
+      </ul>
+    </div>
+
+    <!-- B.Ed -->
+    <div class="feature">
+      <h3>B.Ed — Bachelor of Education (2 Years)</h3>
+      <ul>
+        <li>Professional course for teaching career</li>
+        <li>Eligibility: Any Graduation</li>
+        <li>Career: School Teacher, Education Consultant</li>
+        <li>Higher Studies: M.Ed, Ph.D</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
