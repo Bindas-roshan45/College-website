@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A modern and responsive college website showcasing courses, faculty, campus facilities, and admission details.">
+  <title>R. K. Desai College</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="main-header">
+  <nav class="nav-glass">
+      <div class="college-name">R. K. Desai Achchhariwala Groups College</div>
+
+      <div class="menu">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="#about">About</a>
+        <a href="{{ url_for('courses') }}">Courses</a>
+        <a href="{{ url_for('faculty') }}">Faculty</a>
+        <a href="#contact">Contact</a>
+      </div>
+  </nav>
+
+  <div class="header-content">
+      <h1>Welcome to <span>Your College</span></h1>
+      <p>Quality education, skilled faculty, and an inspiring campus environment.</p>
+      <a class="cta-btn" href="{{ url_for('apply_form') }}">Apply Now</a>
+  </div>
+</header>
+<section class="bottom-grid container">
+
+  <!-- Recent News -->
+  <div class="news-box">
+      <h3 class="box-title">Recent News</h3>
+      <ul class="news-list">
+        <li>No news yet. Add from backend.</li>
+      </ul>
+  </div>
+
+  <!-- Quick Links -->
+  <div class="quicklink-box">
+      <h3 class="box-title">Quick Links</h3>
+      <ul class="ql-list">
+        <li><a href="{{ url_for('sign_up') }}">Student Portal</a></li>
+        <li><a href="#">Teacher Portal</a></li>
+        <li><a href="/exam-pdfs" target="_blank">Exam Schedule</a></li>
+        <li><a href="#">Library</a></li>
+      </ul>
+  </div>
+
+</section>
+
+
+<!-- CONTACT SECTION (Your notebook design style) -->
+<section class="contact-grid container">
+
+  <h2>Contact</h2>
+
+  <div class="contact-box">
+      <div class="contact-left">
+          <p><b>Principal:</b> Dr. Mittal Shah</p>
+          <p><b>Email:</b> mittal@rkdcollege.edu</p>
+          <p><b>Phone:</b> +91-9712267622</p>
+      </div>
+
+      <div class="contact-right">
+          <p><b>College Management:</b> R. K. Desai Trust</p>
+          <p><b>Email:</b> info@rkdcollege.edu</p>
+          <p><b>Phone:</b> +91-9999999999</p>
+      </div>
+  </div>
+</section>
+
+
+<!-- FACULTY TABLE -->
+<section class="faculty-table container">
+  <h2>Faculty</h2>
+
+  <table>
+    <thead>
+      <tr><th>Name</th><th>Department</th><th>Email</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Dr. A</td><td>Computer Science</td><td>a@college.edu</td></tr>
+      <tr><td>Ms. B</td><td>Mathematics</td><td>b@college.edu</td></tr>
+    </tbody>
+  </table>
+</section>
+
+  <section id="contact" class="container" style="padding-top:18px;padding-bottom:48px">
+    <h2>Contact / Enquiry</h2>
+    <div class="grid">
+      <div class="card">
+        <form id="contactForm">
+          <label>Full Name<br><input type="text" name="name" required style="width:100%;padding:8px;margin-top:6px"></label><br><br>
+          <label>Email<br><input type="email" name="email" required style="width:100%;padding:8px;margin-top:6px"></label><br><br>
+          <label>Message<br><textarea name="msg" rows="4" style="width:100%;padding:8px;margin-top:6px"></textarea></label><br><br>
+          <button class="btn" type="submit">Send</button>
+        </form>
+      </div>
+      
+
+      <aside class="card">
+        <h4>Office Hours</h4>
+        <p>Mon - Sat: 8:00 AM - 2:00 PM</p>
+        <h4>Address</h4>
+        <p>Koparli Road,G.I.D.C vapi-396195 </p>
+      </aside>
+    </div>
+  </section>
+  
+  <section id="about" class="container" style="padding-top:36px">
+    <div class="card">
+      <h2>About the College</h2>
+      <p>R.K. Desai College, Vapi, established by the Ramanlal Kunvarji Desai Memorial Trust,<br> is one of the leading institutions of higher education in South Gujarat. The college was<br>founded with the vision of providing quality education to students from rural, industrial,<br> and urban areas, empowering them with knowledge and professional skills. Affiliated to<br> Veer Narmad South Gujarat University, Surat, the college offers diverse programs in <br>Commerce, Management, Computer Applications, Science, and Education. With modern<br> infrastructure, experienced faculty, and a strong focus on academic as well as extracurricular<br> development, the institution continues to shape future professionals and responsible citizens.</p>
+      <h3>Key Highlights</h3>
+      <ul>
+        <li>Established and managed by Ramanlal Kunvarji Desai Memorial Trust</li>
+        <li>Affiliated to Veer Narmad South Gujarat University (VNSGU), Surat</li>
+        <li>Undergraduate programs offered:</li>
+        <li>BCA (Bachelor of Computer Applications)</li>
+        <li>BBA (Bachelor of Business Administration)</li>
+        <li>B.Com (Gujarati & English Medium)</li>
+        <li>B.Sc. (Chemistry & Microbiology)</li>
+        <li>Dual medium of instruction in selected courses: Gujarati & English</li>
+        <li>Facilities: Spacious classrooms, modern laboratories, library, Wi-Fi-enabled computer labs, and student support services</li>
+        <li>Focus on holistic education through academics, cultural activities, workshops, and skill development initiatives</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container">© <span id="year"></span> Your College — All rights reserved</div>
+  </footer>
+
+  <script>
+    // Year auto update
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Contact form demo
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Message sent (demo). For real messages, connect this form to a backend.');
+      this.reset();
+    });
+    
+
+    // News data
+    const news = [
+      {title: 'College Reopens — Semester 4', date:'2025-12-01'},
+      {title: 'Placement Drive - Register Now', date:'2026-01-01'}
+    ];
+    const nl = document.getElementById('newsList'); 
+    nl.innerHTML = '';
+    news.forEach(n => { 
+      const li = document.createElement('li'); 
+      li.textContent = `${n.date} — ${n.title}`; 
+      nl.appendChild(li); 
+    });
+  </script>
+</body>
+</html>
